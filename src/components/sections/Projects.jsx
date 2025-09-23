@@ -34,7 +34,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/FabienThich/Math-1130-A3"
                   className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   {" "}
@@ -96,7 +96,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/FabienThich/Math-1130-A2"
                   className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   {" "}
