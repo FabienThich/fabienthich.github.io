@@ -60,7 +60,7 @@ export const Projects = () => {
                 on Overwatch escort maps.
               </p>
               <div className="flex flex-wrap gap-2 mb-4 cursor-pointer">
-                {["NumPy", "Pandas", "NLTK", "Jupyter Notebook"].map(
+                {["Pandas", "NumPy", "NLTK", "Jupyter Notebook"].map(
                   (tech, key) => (
                     <span
                       key={key}
@@ -74,8 +74,8 @@ export const Projects = () => {
               <div className="flex-grow" />
               <div className="flex justify-between items-center">
                 <a
-                target="_blank"
-                  href="#"
+                  target="_blank"
+                  href="https://github.com/FabienThich/MATH-1130-A1"
                   className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   {" "}
