@@ -10,7 +10,7 @@ export const Footer = () => {
             href="mailto:fabien06@my.yorku.ca"
             className="mx-8 text-blue-500 hover:underline"
           >
-            fabien06@my.yorku.ca
+            fabienthich@gmail.com
           </a>
           <a
             href="https://www.linkedin.com/in/fabienthich/"
