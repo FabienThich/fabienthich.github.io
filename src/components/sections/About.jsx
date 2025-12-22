@@ -1,7 +1,7 @@
 import { RevealOnScroll } from "./RevealOnScroll";
 
 export const About = () => {
-  const frontendSkills = ["React", "TailwindCSS", "Bootstrap"];
+  const frontendSkills = ["React", "TailwindCSS", "Bootstrap", "Webflow"];
   const backendSkills = [
     "Python",
     "SQL",
@@ -19,21 +19,21 @@ export const About = () => {
       className="min-h-screen flex items-center justify-center py-20"
     >
       <RevealOnScroll>
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             About Me
           </h2>
 
           <div className="rounded-xl p-8 border-white/20 border hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
             <p className="text-gray-300 mb-6">
-              I'm a Specialist High Skills Major (SHSM) graduate and a former
-              Junior Software Engineer at North P&D, Inc., where I worked with
-              React.js, Webflow, Bootstrap, and Python. These days, I'm diving
-              into machine learning, AI, and data science. I'm also a Data
-              Science student at York University, building skills in Python,
-              NumPy, Pandas, Seaborn, and Matplotlib (just to name a few). I'm
-              excited to use these tools to tackle real-world problems in the
-              data science space.
+              I'm a Data Science student and former Junior Software Engineer
+              with experience building end-to-end products for multiple clients.
+              I work with Python, SQL, and machine learning, including
+              regression and classification models, and create data
+              visualizations using Matplotlib and Seaborn. Passionate about
+              turning complex datasets into actionable insights, I'm focused on
+              solving real-world problems and building a strong portfolio of
+              data science and ML projects.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -71,8 +71,8 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4">Education</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <b>BSc in Data Science</b> (Healthcare Stream) - York
-                  University
+                  <b>BSc in Data Science</b> - York University (Healthcare
+                  Stream)
                 </li>
                 <li>
                   Relevant Coursework:
