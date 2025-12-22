@@ -98,10 +98,10 @@ export const About = () => {
                     Math Tutor at Pham Learning (2025 - Present)
                   </h4>
                   <p>
-                    Played a key role in managing daily operations while
-                    tutoring students from Grades 1–12, including those with
-                    ADHD and other support needs, through one-on-one, small
-                    group, and large group sessions.
+                    Managed daily tutoring operations while teaching Grades 1-12
+                    through one-on-one, small, and large group sessions,
+                    delivering measurable academic improvements with
+                    individualized progress tracking.
                   </p>
                 </div>
 
