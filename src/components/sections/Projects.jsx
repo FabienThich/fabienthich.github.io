@@ -1,6 +1,7 @@
 import { RevealOnScroll } from "./RevealOnScroll";
+import { ProjectsData } from "./ProjectsData";
 
-export const Projects = () => {
+export const Projects = ({ title, description, techStack, repoLink }) => {
   return (
     <section
       id="projects"
@@ -13,110 +14,33 @@ export const Projects = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* 1st Box */}
-            <div className="p-6 rounded-xl border border-white/20 hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col h-full">
-              <h3 className="text-xl font-bold mb-2">Amazon Prime Reviews</h3>
-              <p className="text-gray-400 mb-4">
-                Analyze Amazon Prime video reviews with Natural Language
-                Processing.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4 cursor-pointer">
-                {[
-                  "Pandas",
-                  "NumPy",
-                  "Seaborn",
-                  "Matplotlib",
-                  "Statsmodel",
-                  "SciPy",
-                  "NLTK",
-                  "WordCloud",
-                ].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+            {ProjectsData.map((project) => (
+              <div className="p-6 rounded-xl border border-white/20 hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col h-full">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4 cursor-pointer">
+                  {project.techStack.map((tech, key) => (
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex-grow" />
+                <div className="flex justify-between items-center">
+                  <a
+                    target="_blank"
+                    href={project.repoLink}
+                    className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    {" "}
+                    View Repo &rarr;
+                  </a>
+                </div>
               </div>
-              <div className="flex-grow" />
-              <div className="flex justify-between items-center">
-                <a
-                  target="_blank"
-                  href="https://github.com/FabienThich/Math-1130-A3"
-                  className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  {" "}
-                  View Repo &rarr;
-                </a>
-              </div>
-            </div>
-
-            {/* 2nd Box */}
-            <div className="p-6 rounded-xl border border-white/20 hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col h-full">
-              <h3 className="text-xl font-bold mb-2">Overwatch</h3>
-              <p className="text-gray-400 mb-4">
-                Data-driven insights on win rates and gameplay dynamics of teams
-                on Overwatch escort maps.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4 cursor-pointer">
-                {["Pandas", "NumPy", "NLTK", "Jupyter Notebook"].map(
-                  (tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-              <div className="flex-grow" />
-              <div className="flex justify-between items-center">
-                <a
-                  target="_blank"
-                  href="https://github.com/FabienThich/MATH-1130-A1"
-                  className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  {" "}
-                  View Repo &rarr;
-                </a>
-              </div>
-            </div>
-
-            {/* 3rd Box */}
-            <div className="p-6 rounded-xl border border-white/20 hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition flex flex-col h-full">
-              <h3 className="text-xl font-bold mb-2">
-                Global Air Pollution Analysis
-              </h3>
-              <p className="text-gray-400 mb-4">
-                An in-depth study of emissions and energy use trends to
-                understand their impact on public health and the environment.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4 cursor-pointer">
-                {["Pandas", "NumPy", "Seaborn", "Matplotlib", "Statsmodel"].map(
-                  (tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-              <div className="flex-grow" />
-              <div className="flex justify-between items-center">
-                <a
-                  target="_blank"
-                  href="https://github.com/FabienThich/Math-1130-A2"
-                  className="my-4 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  {" "}
-                  View Repo &rarr;
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </RevealOnScroll>
