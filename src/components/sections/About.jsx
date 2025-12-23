@@ -13,6 +13,17 @@ export const About = () => {
     "NLTK",
     "Flask",
   ];
+  const DataProgramming = [
+    "Python",
+    "SQL",
+    "R",
+    "Pandas",
+    "NumPy",
+    "scikit-learn",
+    "NLTK",
+    "Flask",
+  ];
+  const MLVisualization = ["Matplotlib", "Seaborn"];
   return (
     <section
       id="about"
