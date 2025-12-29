@@ -37,14 +37,14 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/20 border hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
             <p className="text-gray-300 mb-6">
-              I'm a Data Science student and former Junior Software Engineer
-              with experience building end-to-end products for multiple clients.
-              I work with Python, SQL, and machine learning, including
-              regression and classification models, and create data
-              visualizations using Matplotlib and Seaborn. Passionate about
-              turning complex datasets into actionable insights, I'm focused on
-              solving real-world problems and building a strong portfolio of
-              data science and ML projects.
+              I’m a Data Science student and former Junior Software Engineer
+              with hands-on experience applying Python, SQL, and machine
+              learning to real-world problems. I work with regression and
+              classification models and build clear, insightful data
+              visualizations using Matplotlib and Seaborn. Driven by curiosity
+              and impact, I enjoy turning complex datasets into actionable
+              insights and am actively building a strong portfolio of data
+              science and machine learning projects.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
