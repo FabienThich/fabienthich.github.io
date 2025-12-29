@@ -11,12 +11,12 @@ export const LoadingScreen = ({ onComplete }) => {
       index++;
       if (index > fullText.length) {
         clearInterval(interval);
-
-        setTimeout(() => {
-          onComplete();
-        }, 1000);
+        onComplete();
+        // setTimeout(() => {
+        //   onComplete();
+        // }, 1000);
       }
-    }, 100);
+    }, 50);
     return () => clearInterval(interval);
   }, [onComplete]);
 
