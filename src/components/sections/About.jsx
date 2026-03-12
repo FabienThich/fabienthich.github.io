@@ -46,6 +46,7 @@ export const About = () => {
               insights and am actively building a strong portfolio of data
               science and machine learning projects.
             </p>
+            <h1>test</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
