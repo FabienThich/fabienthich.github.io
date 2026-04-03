@@ -20,11 +20,4 @@ export const ProjectsData = [
     techStack: ["Pandas", "NumPy", "NLTK", "Jupyter Notebook"],
     repoLink: "https://github.com/FabienThich/MATH-1130-A1",
   },
-  {
-    title: "Health Data & Informatics",
-    description:
-      "Audited EHRs from 3 Toronto hospitals to assess patient language data accuracy, identifying gaps affecting 31% of non-English-speaking clients. Analyzed the Ontario Telemedicine Network (eCare/eConsult) and its impact on access for rural populations.",
-    techStack: ["EHR Analysis", "Health Informatics", "Ontario Telemedicine Network"],
-    repoLink: "https://github.com/FabienThich",
-  },
 ];
