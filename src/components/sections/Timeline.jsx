@@ -29,7 +29,7 @@ const ENTRIES = [
 
 export const Timeline = () => {
   return (
-    <section id="experience" className="py-20 relative">
+    <section id="experience" className="py-20 relative overflow-x-hidden">
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
