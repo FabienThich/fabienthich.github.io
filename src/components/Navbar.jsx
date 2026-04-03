@@ -17,8 +17,8 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav
       className={`fixed top-0 w-full z-40 transition-all duration-300 backdrop-blur-lg ${
         scrolled
-          ? "bg-[rgba(10,10,10,0.95)] shadow-lg border-b border-white/10"
-          : "bg-[rgba(10,10,10,0.5)]"
+          ? "bg-[rgba(8,14,35,0.90)] shadow-lg border-b border-blue-500/20"
+          : "bg-[rgba(8,14,35,0.60)]"
       }`}
     >
       <div className="max-w-5xl mx-auto px-4">

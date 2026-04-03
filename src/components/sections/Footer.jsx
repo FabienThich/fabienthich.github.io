@@ -2,7 +2,7 @@ export const Footer = () => {
   return (
     <section
       id="footer"
-      className="flex items-center justify-center py-10 bg-[rgba(10,10,10,0.8)]"
+      className="flex items-center justify-center py-10 bg-[rgba(8,14,35,0.80)] border-t border-blue-500/20"
     >
       <div className="max-w-3xl text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
