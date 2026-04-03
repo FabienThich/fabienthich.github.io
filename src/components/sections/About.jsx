@@ -1,29 +1,43 @@
+import { motion } from "framer-motion";
 import { RevealOnScroll } from "./RevealOnScroll";
 
+const badgeContainerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.04 } },
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
+};
+
+const skillGroups = [
+  {
+    label: "Languages",
+    skills: ["Python", "SQL", "R", "JavaScript", "Java", "PHP"],
+  },
+  {
+    label: "Data Science & ML",
+    skills: ["pandas", "NumPy", "scikit-learn", "SciPy", "statsmodel", "NLTK", "Beautiful Soup", "Requests"],
+  },
+  {
+    label: "Visualization & Apps",
+    skills: ["Matplotlib", "Seaborn", "Plotly", "Streamlit", "Flask", "WordCloud"],
+  },
+];
+
+const courses = [
+  "Statistics I & II",
+  "Health Informatics",
+  "Health Studies I & II",
+  "Data Structures & Algorithms",
+  "Applied Linear Algebra",
+  "Object-Oriented Programming (Python)",
+  "Intro to Data Science",
+  "Intro to R",
+];
+
 export const About = () => {
-  const frontendSkills = ["React", "TailwindCSS", "Bootstrap", "Webflow"];
-  const backendSkills = [
-    "Python",
-    "SQL",
-    "Pandas",
-    "NumPy",
-    "scikit-learn",
-    "Matplotlib",
-    "Seaborn",
-    "NLTK",
-    "Flask",
-  ];
-  const DataProgramming = [
-    "Python",
-    "SQL",
-    "R",
-    "Pandas",
-    "NumPy",
-    "scikit-learn",
-    "NLTK",
-    "Flask",
-  ];
-  const MLVisualization = ["Matplotlib", "Seaborn"];
   return (
     <section
       id="about"
@@ -31,104 +45,66 @@ export const About = () => {
     >
       <RevealOnScroll>
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+          <h2 className="text-3xl font-bold mb-8 gradient-heading text-center">
             About Me
           </h2>
 
-          <div className="rounded-xl p-8 border-white/20 border hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
-            <p className="text-gray-300 mb-6">
-              I’m a Data Science student and former Junior Software Engineer
-              with hands-on experience applying Python, SQL, and machine
-              learning to real-world problems. I work with regression and
-              classification models and build clear, insightful data
-              visualizations using Matplotlib and Seaborn. Driven by curiosity
-              and impact, I enjoy turning complex datasets into actionable
-              insights and am actively building a strong portfolio of data
-              science and machine learning projects.
+          <div className="rounded-xl p-8 border border-white/20 card-hover mb-6">
+            <p className="text-gray-300 mb-8">
+              I&apos;m a Data Science student specializing in health informatics at York University
+              (expected April 2028), with hands-on experience building analytics dashboards and
+              applying Python, SQL, and machine learning to real-world datasets. I&apos;ve analyzed
+              health records, modeled pollution-mortality correlations, and built end-to-end data
+              pipelines. Driven by the intersection of data and health equity, I enjoy turning
+              complex datasets into actionable insights.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                <div className="flex flex-wrap gap-2 cursor-pointer">
-                  {frontendSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {skillGroups.map((group) => (
+                <div key={group.label} className="rounded-xl p-4">
+                  <h3 className="text-lg font-bold mb-3">{group.label}</h3>
+                  <motion.div
+                    className="flex flex-wrap gap-2"
+                    variants={badgeContainerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                  >
+                    {group.skills.map((tech) => (
+                      <motion.span key={tech} variants={badgeVariants} className="skill-badge cursor-pointer">
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </motion.div>
                 </div>
-              </div>
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
-                <div className="flex flex-wrap gap-2 cursor-pointer">
-                  {backendSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border-white/20 border hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
-              <h3 className="text-xl font-bold mb-4">Education</h3>
-              <ul className="list-disc list-outside text-gray-300 space-y-4 pl-4">
-                <li>
-                  <b>BSc in Data Science</b> - York University (Healthcare
-                  Stream)
-                </li>
-                <li>
-                  Relevant Coursework:
-                  <ul className="md:ml-6">
-                    <li>- Principles & Techniques of Data Science</li>
-                    <li>- Data Structures for Data Science</li>
-                    <li>- Communication in Data Science</li>
-                    <li>- Introduction to Statistics I & II</li>
-                    <li>- Elementary Probability</li>
-                    {/* <li>- Applied Linear Algebra</li> */}
-                    {/* <li>- Applied Multivariate & Vector Calculus</li> */}
-                    {/* <li>- Object-Oriented Design & Principles w/ Python</li> */}
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div className="p-6 rounded-xl border-white/20 border hover:-translate-y-1 hover:border-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
-              <h3 className="text-xl font-bold mb-4">Work Experience</h3>
-              <div className="space-y-4 text-gray-300">
-                <div>
-                  <h4 className="font-semibold">
-                    {" "}
-                    Math Tutor at Pham Learning (2025 - Present)
-                  </h4>
-                  <p>
-                    Managed daily tutoring operations while teaching Grades 1-12
-                    through one-on-one, small, and large group sessions,
-                    delivering measurable academic improvements with
-                    individualized progress tracking.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold">
-                    Junior Software Engineer at North P&D Inc (2022-2023)
-                  </h4>
-                  <p>
-                    Software Engineer Intern → Junior Software Engineer: worked
-                    with 3 clients, building features and end-to-end products,
-                    and improved website performance (cut image load times from
-                    800ms to 0ms).
-                  </p>
-                </div>
+          <div className="p-6 rounded-xl border border-white/20 card-hover">
+            <div className="flex flex-wrap items-start justify-between gap-3 mb-5">
+              <div>
+                <h3 className="text-xl font-bold text-white">York University</h3>
+                <p className="text-gray-400 text-sm mt-1">Honours BSc in Data Science (Health)</p>
               </div>
+              <span className="bg-blue-500/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full border border-blue-500/20 whitespace-nowrap">
+                Expected April 2028
+              </span>
             </div>
+            <p className="text-gray-500 text-xs uppercase tracking-widest mb-3">Relevant Coursework</p>
+            <motion.div
+              className="flex flex-wrap gap-2"
+              variants={badgeContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              {courses.map((course) => (
+                <motion.span key={course} variants={badgeVariants} className="skill-badge">
+                  {course}
+                </motion.span>
+              ))}
+            </motion.div>
           </div>
         </div>
       </RevealOnScroll>
